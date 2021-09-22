@@ -1,0 +1,18 @@
+1) PersonTest.successfullyDetect0AgePerson
+Согласно легенде, возраст тинейджера начинается с 13 лет, но метод Person.isTeenager при значении параметра age=0
+возвращает true (а должен false). Чтобы это исправить, нужно добавить проверку age >= 13;
+
+2) PersonTest.successfullyDetect12AgeZoomer
+Согласно легенде, возраст тинейджера начинается с 13 лет, но метод Person.isTeenager при значении параметра age=12
+возвращает true (а должен false). Чтобы это исправить, нужно добавить проверку age >= 13;
+
+3) PersonTest.successfullyDetect19AgeTeenager
+Согласно легенде, возраст тинейджера заканчивается в 19, но метод Person.isTeenager при значении параметра age=19
+возвращает false (а должен true). Чтобы это исправить, нужно изменить проверку age < 19 на age <= 19;
+
+4) PersonTest.unsuccessfullyDetectNegateAgePerson
+Отрицательное число-это невалидный возраст, но метод Person.isTeenager отрабатывает значение без ошибок
+(возвращает true). Чтобы это исправить, нужно вставить проверку в начале метода
+if (age < 0) {
+    throw new RuntimeException();
+}
